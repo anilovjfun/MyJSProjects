@@ -1,0 +1,23 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+<title>Make Your Own Top List</title>
+</head>
+<body>
+<p>You can make your own Top List here:</p>
+<button onclick="TopList()">Click Me!</button>
+<script language="javascript">
+function TopList() {
+	document.write("<font size=20><b>" + prompt("What title do you want in your Top List?") + "</b></font><br>");
+	var num = Number(prompt("How many entries do you need in your Top List? Usually 5, 10, 15, 20, 25, 50, 100."));
+	while (isNaN(num) === true) {
+		alert("Invalid Number!! Try Again.");
+		num = prompt("How many entries do you need in your Top List? Usually 5, 10, 15, 20, 25, 50, 100.");
+	}
+	for (var i = 1; i <= num; i++) {
+		document.write(i + ". " + prompt("What's in entry no. " + i) + "<br>");
+	}
+}
+</script>
+</body>
+</html>
